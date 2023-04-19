@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3148D942993EE8B00515CEA /* FMDB in Frameworks */ = {isa = PBXBuildFile; productRef = D3148D932993EE8B00515CEA /* FMDB */; };
+		D3AA59EA29EF955800B7DE7E /* LocalDatabase.app in Resources */ = {isa = PBXBuildFile; fileRef = D36671342999BC630055E5AB /* LocalDatabase.app */; platformFilter = ios; };
 		D3ADF24740259C7C007DFF05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ADF24640259C7C007DFF05 /* AppDelegate.swift */; };
 		D3ADF24940259C7C007DFF05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ADF24840259C7C007DFF05 /* SceneDelegate.swift */; };
 		D3ADF24B40259C7C007DFF05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ADF24A40259C7C007DFF05 /* ViewController.swift */; };
 		D3ADF24E40259C7C007DFF05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ADF24C40259C7C007DFF05 /* Main.storyboard */; };
 		D3ADF25040259C7D007DFF05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3ADF24F40259C7D007DFF05 /* Assets.xcassets */; };
 		D3ADF25340259C7D007DFF05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ADF25140259C7D007DFF05 /* LaunchScreen.storyboard */; };
+		D3ADF25D40259CA7007DFF05 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ADF25B40259CA7007DFF05 /* libsqlite3.tbd */; };
+		D3ADF25E40259CA7007DFF05 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D3ADF25C40259CA7007DFF05 /* libsqlite3.0.tbd */; };
+		D3ADF26040259E78007DFF05 /* employee.db in Resources */ = {isa = PBXBuildFile; fileRef = D3ADF25F40259E78007DFF05 /* employee.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D3ADF24340259C7C007DFF05 /* LocalDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3148D8C2993EA2C00515CEA /* LocalDatabase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LocalDatabase-Bridging-Header.h"; sourceTree = "<group>"; };
+		D36671342999BC630055E5AB /* LocalDatabase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalDatabase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36671372999C0610055E5AB /* EmployeeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListViewController.swift; sourceTree = "<group>"; };
 		D3ADF24640259C7C007DFF05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3ADF24840259C7C007DFF05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D3ADF24A40259C7C007DFF05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		D3ADF24F40259C7D007DFF05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3ADF25240259C7D007DFF05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3ADF25440259C7D007DFF05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3ADF25B40259CA7007DFF05 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		D3ADF25C40259CA7007DFF05 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D3ADF25F40259E78007DFF05 /* employee.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = employee.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ADF25D40259CA7007DFF05 /* libsqlite3.tbd in Frameworks */,
+				D3148D942993EE8B00515CEA /* FMDB in Frameworks */,
+				D3ADF25E40259CA7007DFF05 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,16 +54,9 @@
 			isa = PBXGroup;
 			children = (
 				D3ADF24540259C7C007DFF05 /* LocalDatabase */,
-				D3ADF24440259C7C007DFF05 /* Products */,
+				D3ADF25A40259CA7007DFF05 /* Frameworks */,
+				D36671342999BC630055E5AB /* LocalDatabase.app */,
 			);
-			sourceTree = "<group>";
-		};
-		D3ADF24440259C7C007DFF05 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D3ADF24340259C7C007DFF05 /* LocalDatabase.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		D3ADF24540259C7C007DFF05 /* LocalDatabase */ = {
@@ -58,13 +64,25 @@
 			children = (
 				D3ADF24640259C7C007DFF05 /* AppDelegate.swift */,
 				D3ADF24840259C7C007DFF05 /* SceneDelegate.swift */,
+				D36671372999C0610055E5AB /* EmployeeListViewController.swift */,
 				D3ADF24A40259C7C007DFF05 /* ViewController.swift */,
+				D3ADF25F40259E78007DFF05 /* employee.db */,
 				D3ADF24C40259C7C007DFF05 /* Main.storyboard */,
 				D3ADF24F40259C7D007DFF05 /* Assets.xcassets */,
 				D3ADF25140259C7D007DFF05 /* LaunchScreen.storyboard */,
 				D3ADF25440259C7D007DFF05 /* Info.plist */,
+				D3148D8C2993EA2C00515CEA /* LocalDatabase-Bridging-Header.h */,
 			);
 			path = LocalDatabase;
+			sourceTree = "<group>";
+		};
+		D3ADF25A40259CA7007DFF05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3ADF25C40259CA7007DFF05 /* libsqlite3.0.tbd */,
+				D3ADF25B40259CA7007DFF05 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,8 +101,11 @@
 			dependencies = (
 			);
 			name = LocalDatabase;
+			packageProductDependencies = (
+				D3148D932993EE8B00515CEA /* FMDB */,
+			);
 			productName = LocalDatabase;
-			productReference = D3ADF24340259C7C007DFF05 /* LocalDatabase.app */;
+			productReference = D36671342999BC630055E5AB /* LocalDatabase.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,6 +120,7 @@
 				TargetAttributes = {
 					D3ADF24240259C7C007DFF05 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1300;
 					};
 				};
 			};
@@ -111,7 +133,10 @@
 				Base,
 			);
 			mainGroup = D3ADF23A40259C7B007DFF05;
-			productRefGroup = D3ADF24440259C7C007DFF05 /* Products */;
+			packageReferences = (
+				D3148D922993EE8B00515CEA /* XCRemoteSwiftPackageReference "fmdb" */,
+			);
+			productRefGroup = D3ADF23A40259C7B007DFF05;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -125,9 +150,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3AA59EA29EF955800B7DE7E /* LocalDatabase.app in Resources */,
 				D3ADF25340259C7D007DFF05 /* LaunchScreen.storyboard in Resources */,
 				D3ADF25040259C7D007DFF05 /* Assets.xcassets in Resources */,
 				D3ADF24E40259C7C007DFF05 /* Main.storyboard in Resources */,
+				D3ADF26040259E78007DFF05 /* employee.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -304,6 +332,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rnw.LocalDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LocalDatabase/LocalDatabase-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -314,6 +344,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -331,6 +362,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rnw.LocalDatabase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "LocalDatabase/LocalDatabase-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -358,6 +390,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D3148D922993EE8B00515CEA /* XCRemoteSwiftPackageReference "fmdb" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ccgus/fmdb";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D3148D932993EE8B00515CEA /* FMDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3148D922993EE8B00515CEA /* XCRemoteSwiftPackageReference "fmdb" */;
+			productName = FMDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D3ADF23B40259C7B007DFF05 /* Project object */;
 }

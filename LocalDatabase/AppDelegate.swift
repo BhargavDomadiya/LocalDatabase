@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  LocalDatabase
 //
-//  Created by R&W on 08/02/35.
+//  Created by R93 on 08/02/35.
 //
 
 import UIKit
@@ -10,10 +10,10 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    static var databasePath: String = ""
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AppDelegate.databasePath = getDatabasePath()
         return true
     }
 
@@ -31,6 +31,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
+    
+    func getDatabasePath() -> String {
+        let documentDirectoryPaths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let dataBaseFileMainBundlePath = Bundle.main.path(forResource: "employee", ofType: "db")
+        print(dataBaseFileMainBundlePath)
+        print(documentDirectoryPaths)
+        let dataPath = documentDirectoryPaths[0] + "/" + "employee.db" //NSString(string:documentDirectoryPaths[0]).appendingPathComponent("employee.db")//
+        let fileManager = FileManager()
+        if fileManager.fileExists(atPath: dataPath) == false {
+            print("File ne copy karavo")
+            do {
+                try fileManager.copyItem(atPath: dataBaseFileMainBundlePath ?? "", toPath: dataPath)
+                return dataPath
+            }
+            catch {
+                print("Something went wrong")
+                return ""
+            }
+        }
+        return dataPath
+    }
+    
 
 }
 
